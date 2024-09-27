@@ -126,13 +126,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-if DEBUG:
-    STATICFILE_DIRS = [os.path.join(BASE_DIR, "static")]
-else:
-    STATIC_ROOT = [os.path.join(BASE_DIR, "static")]
-
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Directory for additional static files in development
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")    # Directory where all static files are collected in production
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
