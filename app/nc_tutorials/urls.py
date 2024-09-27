@@ -23,3 +23,6 @@ urlpatterns = [
     path('', include('tutorials.urls')),
     path('', include('users.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+print(f"DEBUG: {settings.DEBUG}, STATIC_URL: {settings.STATIC_URL}, STATIC_ROOT: {settings.STATIC_ROOT}")
+
