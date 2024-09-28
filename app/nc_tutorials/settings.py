@@ -123,16 +123,10 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Used in development
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")    # Used in production
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Directory for additional static files in development
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")    # Directory where all static files are collected in production
 
 
 # Default primary key field type
